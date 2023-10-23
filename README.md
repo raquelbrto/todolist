@@ -9,12 +9,12 @@
 ### Requisitos
 
  - Usar banco de dados
- - Campos mínimos da entidade de tarefa 
- - Nome
- - Descrição
- - Realizado
- - Prioridade
- - Criar CRUD de tarefas
+   - Campos mínimos da entidade de tarefa 
+   - Nome
+   - Descrição
+   - Realizado
+   - Prioridade
+   - Criar CRUD de tarefas
 
 ## Recursos necessarios para rodar a aplicação:
 - IDE de sua preferencia
