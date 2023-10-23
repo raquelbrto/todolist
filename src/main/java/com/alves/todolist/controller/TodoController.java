@@ -2,6 +2,7 @@ package com.alves.todolist.controller;
 
 import com.alves.todolist.entity.Todo;
 import com.alves.todolist.service.TodoService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +20,7 @@ public class TodoController {
     }
 
     @PostMapping
-    public ResponseEntity<List<Todo>> ceate(@RequestBody Todo todo) {
+    public ResponseEntity<List<Todo>> ceate(@RequestBody @Valid Todo todo) {
 
         return ResponseEntity.status(HttpStatus.CREATED).body(todoService.create(todo));
     }
@@ -30,7 +31,7 @@ public class TodoController {
     }
 
     @PutMapping
-    public List<Todo> update(@RequestBody Todo todo) {
+    public List<Todo> update(@RequestBody @Valid Todo todo) {
         return todoService.update(todo);
     }
 
