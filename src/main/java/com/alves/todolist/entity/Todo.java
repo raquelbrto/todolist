@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 public class Todo {
@@ -12,11 +13,17 @@ public class Todo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @NotBlank
+    @NotNull
     private String nome;
+
     @NotBlank
+    @NotNull
     private String descricao;
+
     private boolean realizado;
+
     private int prioridade;
 
     public Long getId() {
